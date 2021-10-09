@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+	setlocale (LC_ALL, "RUS");
+	printf("Задание 1\nЗадайте 2 числа: \n");
+	int a, b, c;
+	cout << "A= "; cin >> a;
+	cout << "B= "; cin >> b;
+	cout << "Было a, b: " << a << " " << b << endl;
+	c = b;
+	b = a;
+	a = c;
+	cout << "После a, b: " << a << " " << b << endl;
+}

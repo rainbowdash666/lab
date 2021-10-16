@@ -1,0 +1,23 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "RUS");
+	
+
+	cout << "Задание 7\nВведите значение a\n";
+	double a, b,c;
+	cout << "a = ";
+	cin >> a;
+	b = a * a;
+	b = b * b;
+	c = b * a;
+	b = c * c * c;
+	cout << "b = " << b << endl;
+
+
+	return 0;
+}

@@ -2,16 +2,16 @@
 #include <cmath>
 using namespace std;
 
-int main() 
+int main()
 {
-	setlocale (LC_ALL, "RUS");
+	setlocale(LC_ALL, "RUS");
 	printf("Задание 1\nЗадайте 2 числа: \n");
 	int a, b, c;
 	cout << "A= "; cin >> a;
 	cout << "B= "; cin >> b;
-	cout << "Было a, b: " << a << " " << b << endl;
+	cout << "Было A, B: " << a << " " << b << endl;
 	c = b;
 	b = a;
 	a = c;
-	cout << "После a, b: " << a << " " << b << endl;
+	cout << "После A, B: " << a << " " << b << endl;
 }

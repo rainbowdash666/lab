@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "RUS");
-	printf("Задание 1\nЗадайте 2 числа: \n");
+	cout << "Задание 1\nЗадайте 2 числа\n";
 	int a, b, c;
 	cout << "A= "; cin >> a;
 	cout << "B= "; cin >> b;

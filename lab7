@@ -9,6 +9,7 @@ int main()
         setlocale(LC_ALL, "RUS");
         const float p(3.14);
         float g, r;
+        cout << "Задание 1" << endl;
         cout << "Введите значение угла в градусах так, что 0 < a < 360" << endl;
         cin >> g;
         r = p / 180 * g;
@@ -16,19 +17,19 @@ int main()
 
     }
     {
-        setlocale(LC_ALL, "RUS");
         const float p(3.14);
         float g, r;
-        cout << "\nВведите значение угла в радианах так, что 0 < a < 2*p" << endl;
+        cout << "\nЗадание 2" << endl;
+        cout << "Введите значение угла в радианах так, что 0 < a < 2*p" << endl;
         cin >> r;
         g = r / p * 180;
         cout << "Значение этого угла в градусах равно " << g << endl;
 
     }
     {
-        setlocale(LC_ALL, "RUS");
         float x, a, y, a1, ay;
-        cout << "\nВведите количество кг конфет (X)" << endl;
+        cout << "\nЗадание 3" << endl;
+        cout << "Введите количество кг конфет (X)" << endl;
         cin >> x;
         cout << "Введите стоимость " << x << " кг конфет" << endl;
         cin >> a;
@@ -41,9 +42,9 @@ int main()
 
     }
     {
-        setlocale(LC_ALL, "Russian");
         float v1, v2, s, t, r;
-        cout << "\nВведите скорости двух автомобилей" << endl;
+        cout << "\nЗадание 4" << endl;
+        cout << "Введите скорости двух автомобилей" << endl;
         cin >> v1 >> v2;
         cout << "Введите расстояние между автомобилями" << endl;
         cin >> s;
@@ -54,26 +55,31 @@ int main()
 
     }
     {
-        setlocale(LC_ALL, "Russian");
         float a, b, x;
-        cout << "\nВведите коэффициенты А и В" << endl;
+        cout << "\nЗадание 5" << endl;
+        cout << "Введите коэффициенты А и В" << endl;
         cin >> a >> b;
         x = -b / a;
         cout << "X = " << x << endl;
 
     }
     {
-        setlocale(LC_ALL, "Russian");
         float a1, a2, b1, b2, c1, c2, d, d1, d2, x, y;
-        cout << "\nВведите коэффициенты А1, A2, B1, B2, C1 и C2" << endl;
+        cout << "\nЗадание 6" << endl;
+        cout << "Введите коэффициенты А1, A2, B1, B2, C1 и C2" << endl;
         cin >> a1 >> a2 >> b1 >> b2 >> c1 >> c2;
         d = a1 * b2 - a2 * b1;
         d1 = c1 * b2 - b1 * c2;
         d2 = a1 * c2 - a2 * c1;
         x = d1 / d;
         y = d2 / d;
+        if (x == -0)
+            x = 0;
+        if (y == -0)
+            y = 0;
         cout << "X = " << x << endl;
         cout << "Y = " << y << endl;
 
     }
+    return 0;
 }

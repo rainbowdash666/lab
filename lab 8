@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	{
+		setlocale(LC_ALL, "RUS");
+		printf("Задание 1\nВведите размер файла\n");
+		float b;
+		cin >> b;
+		cout << "Размер файла в килобайтах:  " << b / 1024 << endl;
+	}
+	{
+		printf("\nЗадание 2\nВВедите A, B (A > B)\n");
+		float a, b;
+		cin >> a >> b;
+		(a < b);
+		cout << "B в A: " << a / b << endl;
+	}
+	{
+		printf("\nЗадание 3\nВведите A, B (A > B) \n");
+		int a, b;
+		cin >> a >> b; (a < b);
+		cout << "Длина незанятой части отрезка - " << a % b << endl;
+	}
+	{
+		int a, b, a1, a2;
+		printf("\nЗадание 4\nВведите двузначное число\n");
+		cin >> a;
+		a1 = a / 10;
+		a2 = a - a1 * 10;
+		b = a2 * 10 + a1;
+		cout << "\nБыло " << a << "\nСтало " << b << endl;
+	}
+	{
+		int a, b, a1, a2, a3;
+		cout << "\nЗадание 5\nВведите трехзначное число\n" << endl;
+		cin >> a;
+		a1 = a / 100;
+		a2 = (a - a1 * 100) / 10;
+		a3 = a - a1 * 100 - a2 * 10;
+		b = a2 * 100 + a3 * 10 + a1;;
+		cout << "\nБыло " << a << "\nСтало " << b << endl;
+	}
+	return 0;
+}

@@ -2,26 +2,39 @@
 #include <cmath>
 using namespace std;
 
-int main() {
+int main()
+{
 	{
 		setlocale(LC_ALL, "RUS");
 		printf("Задание 1\nВведите размер файла\n");
-		int b;
-		cin >> b;
-		cout << "Размер файла в килобайтах:  " << b / 1024 << endl;
+		int a, c, d;
+		float b;
+		cin >> a;
+		b = a / 1024;
+		d = a % 1024;
+		if (d != 0) {
+			c = b + 1;
+		}
+		else {
+			c = b;
+		}
+		cout << "Размер файла в килобайтах равен: " << c << endl;
 	}
 	{
-		printf("\nЗадание 2\nВВедите A, B (A > B)\n");
+		printf("\nЗадание 2\nВведите A, B (A > B)\n");
 		int a, b;
 		cin >> a >> b;
 		(a < b);
 		cout << "B в A: " << a / b << endl;
 	}
 	{
-		printf("\nЗадание 3\nВведите A, B (A > B) \n");
-		int a, b;
-		cin >> a >> b; (a < b);
-		cout << "Длина незанятой части отрезка - " << a % b << endl;
+		printf("\nЗадание 3\nВведите два положительных числа A, B (A > B)\n");
+		int b, a, d;
+		float c;
+		cin >> a >> b;
+		c = a / b;
+		d = a - c * b;
+		cout << "Длина незанятой части отрезка - " << d << endl;
 	}
 	{
 		printf("\nЗадание 4\nВведите двузначное число\n");
@@ -33,14 +46,19 @@ int main() {
 		cout << "\nБыло " << a << "\nСтало " << b << endl;
 	}
 	{
-		cout << "\nЗадание 5\nВведите трехзначное число\n" << endl;
+		cout << "\nЗадание 5\nВведите трехзначное число" << endl;
 		int a, b, a1, a2, a3;
 		cin >> a;
 		a1 = a / 100;
-		a2 = (a - a1 * 100) / 10;
-		a3 = a - a1 * 100 - a2 * 10;
-		b = a2 * 100 + a3 * 10 + a1;;
-		cout << "\nБыло " << a << "\nСтало " << b << endl;
+		a2 = a / 10;
+		a3 = a2%10;
+		b = a %10;
+		if (a > 0) {
+			cout << "Стало " << a3 << b << a1 << endl;
+		}
+		else
+			cout << "Стало " << abs(a3) << abs(b) << abs(a1) << endl;
+
+		return 0;
 	}
-	return 0;
 }

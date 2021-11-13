@@ -6,13 +6,13 @@ int main() {
 	{
 		setlocale(LC_ALL, "RUS");
 		printf("Задание 1\nВведите размер файла\n");
-		float b;
+		int b;
 		cin >> b;
 		cout << "Размер файла в килобайтах:  " << b / 1024 << endl;
 	}
 	{
 		printf("\nЗадание 2\nВВедите A, B (A > B)\n");
-		float a, b;
+		int a, b;
 		cin >> a >> b;
 		(a < b);
 		cout << "B в A: " << a / b << endl;
@@ -24,8 +24,8 @@ int main() {
 		cout << "Длина незанятой части отрезка - " << a % b << endl;
 	}
 	{
-		int a, b, a1, a2;
 		printf("\nЗадание 4\nВведите двузначное число\n");
+		int a, b, a1, a2;
 		cin >> a;
 		a1 = a / 10;
 		a2 = a - a1 * 10;
@@ -33,8 +33,8 @@ int main() {
 		cout << "\nБыло " << a << "\nСтало " << b << endl;
 	}
 	{
-		int a, b, a1, a2, a3;
 		cout << "\nЗадание 5\nВведите трехзначное число\n" << endl;
+		int a, b, a1, a2, a3;
 		cin >> a;
 		a1 = a / 100;
 		a2 = (a - a1 * 100) / 10;

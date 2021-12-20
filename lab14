@@ -1,9 +1,37 @@
 #include <iostream>
 using namespace std;
+
+int fib(int n) {
+    int f = 0;
+    int res = 1;
+    int f0 = 1;
+    int i = 0;
+    while (i <= n) {
+        res = f;
+        f = f0 + f;
+        f0 = res;
+        i++;
+        if (n == f)
+        {
+            cout << "номер: ";
+            return i;
+        }
+    }
+    if (n == 0)
+    {
+
+        return 0;
+    }
+    else
+    {
+        cout << "ошибка ";
+        return 404;
+    }
+}
 int main()
 {
     int a, b, N, k, proc;
-    setlocale (LC_ALL, "ru");
+    setlocale(LC_ALL, "ru");
     cout << "Задание 1\n";
     cout << "Введите a: ";
     cin >> a;
@@ -19,19 +47,18 @@ int main()
             cout << i << " ";
         }
     }
-    cout << "\n\nЗадание 2\n";
+    cout << "\nЗадание 2\n";
     i = 0;
     cout << "Введите длинну отрезка а: \n";
     cin >> a;
     cout << "Введите длинну отрезка b: \n";
     cin >> b;
-    while (a >= b)
+    while (a > b)
     {
         a -= b;
         i++;
     }
-    cout << "Длина незанятой части отрезка A: " << i << endl;
-
+    cout << i << endl;
     cout << "\nЗадание 3\n";
     cout << "Введите N:\n";
     cin >> N;
@@ -42,26 +69,24 @@ int main()
         k += 1;
         i += k;
     }
-    cout << "Наименьшее K = " << k << endl << "Сумма равна: " << i << endl;
-    cout << "\nЗадание 4\n";
-    cout << "Введите процент по вкладу(>0 <25) :";
-    cin >> proc;
-    if (proc < 0 || proc>25)
+    cout << "Наименьшее к = " << k << endl << "Сумма равна: " << i << endl;
     {
-        cout << "Нереальный процент :)";
-        system("pause");
-        return 1;
-    }
-    double deposit = 1000;
-    int count = 0;
-    while (deposit < 1100)
-    {
-        deposit += deposit / proc;
-        count++;
-    }
+        int k(0);
+        float p,s(1000);
+        cout << "\nЗадание 4\n";
+        cout << "Введите количество процентов P (P — вещественное число, 0 < P < 25)." << endl;
+        cin >> p;
 
-    cout << "До превышения лимита вклада на сумму 1100р понадобится: " << count << " месяца " << "\nСумма вклада соcтавит: " << deposit << " руб.";
-    cout << "\n\nЗадание 5\n";
+        while (s <= 1100) {
+            ++k;
+            s += s * p / 100;
+        }
+
+        cout << "Количество месяцев равно " << k << endl;
+        cout << "Итоговый развер вклада равен " << s << endl;
+
+    }
+    cout << "\nЗадание 5\n";
     long int A, B;
     cout << "Введите 2 числа: ";
     cin >> A >> B;
@@ -72,26 +97,10 @@ int main()
             B = B - A;
     }
     cout << "НОД этих чисел: " << A;
-    cout << "\n\nЗадание 6\n";
+    cout << "\nЗадание 6\n";
     int n;
     cout << "Введите число Фибоначчи: \n";
     cin >> n;
-    int f = 0;
-    int res = 1;
-    int f0 = 1;
-    i = 0;
-    while (i <= n) {
-        res = f;
-        f = f0 + f;
-        f0 = res;
-        i++;
-        if (n == f)
-            return i;
-    }
-    if (n == 0)
-        return 0;
-    else
-    {
-        cout << "это не число Фибоначчи";
-    }
+    cout << fib(n);
+    return 0;
 }

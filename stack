@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+int N = 10;
+class stack { 
+private: 
+	int* arr; 
+	int top; 
+public: 
+	
+	stack() 
+{
+	
+}
+	  stack(int m) 
+	  {
+		  top = 1;
+		  arr = new int[m];
+	  }
+	  ~stack() 
+	  {
+		  delete[] arr;
+	  }
+	  void push(int a) 
+	  {
+		  if (top == N+1) 
+			  cout << "Стэк переполнен!!!" << endl;
+		  else
+		  {
+			  top++;
+			  arr[top] = a;
+			  cout << "top" << top << endl;
+		  }
+	  }
+	  void pop() 
+	  {
+		  if (top > 1) 
+		  {
+			  cout << arr[top]; 
+			  top--;
+			  cout << "top" << top << endl;
+		  }
+		  else 
+			  cout << "Стэк пуст!!!";
+	  }
+};
+int main() {
+	setlocale(LC_ALL, "rus");
+	int z;
+	bool r;
+	cout << "Сколько будет элементов в стэке: ";
+	cin >> N;
+	stack one(N);
+	do {
+		cout << "Для добавление введите 1, для извлечения 0: ";
+		cin >> r;
+		if (r)
+		{
+			cout << "Введите значение: ";
+			cin >> z;
+			one.push(z);
+		}
+		else
+		{
+			cout << "Значение равно: ";
+			one.pop();
+			cout << endl;
+		}
+	} while (true);
+	return 0;
+}
